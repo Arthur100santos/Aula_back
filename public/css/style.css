@@ -1,5 +1,5 @@
 :root{
-  --background: #1c1b1b;
+  --background: #1c1b1c;
   --blue: #068FFF;
   --white: #fff
 }
@@ -42,6 +42,18 @@
   color: var(--blue);
 }
 
+/* Message */
+.message{
+  padding: 1rem;
+  color: var(--blue);
+  background-color: var(--white);
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 60%;
+}
+
 
 /* Container */
 .container{
@@ -58,5 +70,55 @@ footer{
 
 footer span{
   font-weight: bold;
+  color: var(--blue);
+}
+
+/* Register */
+
+.auth-container{
+max-width: 468px;
+margin: auto;
+
+}
+
+.auth-container form{
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container h2::before{
+  content: "";
+  padding: 2px;
+  padding-top: 10px;
+  border-left: 6px solid var(--blue);
+  padding: 2px;
+  margin: 0 7px 0 0;
+}
+
+.auth-container label{
+  font: bold;
+  margin-top: 15px;
+}
+
+.auth-container input{
+  padding: 15px;
+  border: 2px solid var(--white);
+  outline-color: var(--blue);
+}
+
+.auth-container input:focus{
+  border-color: var(--blue);
+  outline: none;
+}
+
+.auth-container input[type=submit]{
+  max-width: 154px;
+  margin-top: 20px;
+  border-color: var(--blue);
+  color: var(--white);
+  font-weight: bold;
+}
+
+.auth-container a{
   color: var(--blue);
 }

@@ -14,6 +14,7 @@ const Tought = require('./models/Tought')
 
 //Import Rotas
 const toughtsRoutes = require('./routes/toughtsRoutes')
+const authRouters = require('./routes/authRouters')
 
 //Import Controller
 const ToughtsController = require('./controllers/ToughtsController')
@@ -62,11 +63,13 @@ app.use((request, response, next) => {
 
 //Rotas da aplicação
 app.use('/toughts', toughtsRoutes)
+app.use('/', authRouters)
 
 app.get('/', ToughtsController.showToughts)
 
 //Conexão e criação das tabelas do banco
 conn
+  // .sync({force:true})
   .sync()
   .then(() => {
     app.listen(3333);
